@@ -21,7 +21,7 @@ const App = () => {
         </div>
         <Links>
           <LinkBox>
-            <SubTitle>Taxi: </SubTitle>
+            <SubTitle>Taxi:</SubTitle>
             <Link href="https://www.taxi.com/members/michael-sayer" target="_blank" rel="noopener noreferrer">
               Taxi Member Profile
             </Link>
@@ -38,7 +38,7 @@ const App = () => {
           </LinkBox>
 
           <LinkBox>
-            <SubTitle>The Great Turtle: </SubTitle>
+            <SubTitle>The Great Turtle:</SubTitle>
             <Link href="https://greatturtle.bandcamp.com/" target="_blank" rel="noopener noreferrer">
               bandcamp
             </Link>
@@ -122,12 +122,6 @@ const Link = styled.a`
       text-shadow: 0px 0px 1px ${neveColors.lightBlue};
       box-shadow: -6px -6px 10px 0px #2f3a52, 6px 6px 10px 0px #00000017;
   }
-`;
-
-const Logo = styled.img`
-  width: 30px;
-  height: 30px;
-  margin: 0px 10px;
 `;
 
 export default App;
