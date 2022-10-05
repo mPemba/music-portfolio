@@ -9,7 +9,7 @@ const App = () => {
         <Title>
           Michael Sayer
         </Title>
-        <SubTitle>Composer based in Salt Lake City</SubTitle>
+        <SubTitle>Composer based in Salt Lake City.</SubTitle>
         <SubTitle>I have multiple projects under way</SubTitle>
         <SubTitle>including music for film and television.</SubTitle>
         <ColorsVertical>
@@ -25,11 +25,9 @@ const App = () => {
             <Details>
               <ProjectDetails>
                 <Text>
-                  A proud Taxi member for years. I love the process and the challenge
-                  of writing music for film. I have written music for a variety of
-                  projects including short films and documentaries.
-                  I'm always looking for new projects to work on.
-                  If you have a project you'd like to discuss, please contact me.
+                  A proud Taxi member for years. I love the process and the challenge of writing music for film. 
+                  My music has been featured in indie films and podcasts and I&apos;m always looking for new projects.
+                  If you have a project you&apos;d like to discuss, please contact me at michael.j.say@gmail.com.
                 </Text>
               </ProjectDetails>
               <ProjectDetails>
@@ -72,10 +70,10 @@ const App = () => {
             </Details>
               <Links>
                 <Link href="https://youngmichael.bandcamp.com/" target="_blank" rel="noopener noreferrer">
-                  bandcamp
+                  BandCamp
                 </Link>
-                <Link href="youtube.com/user/michaeljsay" target="_blank" rel="noopener noreferrer">
-                  youtube
+                <Link href="https://youtube.com/user/michaeljsay" target="_blank" rel="noopener noreferrer">
+                  YouTube
                 </Link>
               </Links>
           </Project>
@@ -103,14 +101,20 @@ const App = () => {
             </Details>
             <Links>
                 <Link href="https://greatturtle.bandcamp.com/" target="_blank" rel="noopener noreferrer">
-                  bandcamp
+                  BandCamp
                 </Link>
               </Links>
           </Project>
 
           <Project>
-          <SubTitle>Crime Tiger - coming soon</SubTitle>
+            <SubTitle>Crime Tiger - coming soon</SubTitle>
             <Details>
+              <ProjectDetails>
+                <Text>
+                  Crime Tiger is an folk rock band. We are currently recording our first album.
+                  We are looking forward to sharing it with you soon.
+                </Text>
+              </ProjectDetails>
               <ProjectDetails>
                 <ColorsVertical>
                   <div style={{ width: '100%', height: '25px', background: colors.white }}></div>
@@ -120,27 +124,35 @@ const App = () => {
                   <div style={{ width: '100%', height: '25px', background: colors.darkGrays }}></div>
                 </ColorsVertical>
               </ProjectDetails>
-              <ProjectDetails>
-                <Text>
-                  Crime Tiger is a rock n roll band. We are currently recording our first album.
-                  We are looking forward to sharing it with you soon.
-                </Text>
-              </ProjectDetails>
             </Details>
-              <Links>
-                <Link href="https://youngmichael.bandcamp.com/" target="_blank" rel="noopener noreferrer">
-                  bandcamp
-                </Link>
-                <Link href="youtube.com/user/michaeljsay" target="_blank" rel="noopener noreferrer">
-                  youtube
-                </Link>
-              </Links>
+          </Project>
+
+          <Project>
+            <Notes>
+              <SubTitle>Notes</SubTitle>
+              <Text>
+                I&apos;m pretty sure social media is causing the downfall of democracy, so I stay off most of it.
+                Here&apos;s my LinkedIn and Twitter just in case:
+              </Text>
+              <LogoContainer>
+                <LogoLink href="https://www.linkedin.com/in/mikesayer/" target="_blank" rel="noopener noreferrer">
+                  <Logo src="/linkedin.svg" alt="linkedin" /> 
+                </LogoLink> 
+                <LogoLink href="https://twitter.com/michaeljsayer" target="_blank" rel="noopener noreferrer">
+                  <Logo src="/twitter.svg" alt="twitter" />  
+                </LogoLink> 
+              </LogoContainer>
+              <Text>
+                If you are looking for my software engineering portfolio, you can find it 
+                <LogoLink style={{ color: colors.green }} href="https://www.michaelsayer.com/" target="_blank" rel="noopener noreferrer"> here</LogoLink>
+              </Text>
+            </Notes>
           </Project>
         </Projects>
       </Content>
     </Main>
   );
-}
+};
 
 const Main = styled.div`
   width: 100%;
@@ -233,7 +245,6 @@ const Details = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-left: 10px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -270,19 +281,59 @@ const Links = styled.div`
   margin-top: 10px;
   padding-left: 44px;
   border-top: 2px solid ${colors.opal};
+
+  @media (max-width: 768px) {
+    padding-left: 22px;
+  }
 `;
 
 const Link = styled.a`
   width: fit-content;
   margin: 10px 0px;
   color: ${colors.darkGray};
-  padding: 13px;
+  padding-right: 13px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1em;
   &:hover {
       color: ${colors.opal};
   }
+`;
+
+const Notes = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 44px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 22px;
+  }
+`;
+
+const Logo = styled.img`
+  width: 30px;
+  height: 30px;
+
+  :hover {
+    transform: scale(1.1);
+  }
+`;
+
+const LogoContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0px;
+`;
+
+const LogoLink = styled(Link)`
+  padding: 0px;
 `;
 
 export default App;
