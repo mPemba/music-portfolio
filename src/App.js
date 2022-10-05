@@ -1,49 +1,142 @@
 import React from 'react';
 import styled from 'styled-components';
-import { neveColors } from './library/colors';
+import { colors } from './library/colors';
 
 const App = () => {
   return (
     <Main>
       <Content>
         <Title>
-          Hello my name is Michael Sayer.
+          Michael Sayer
         </Title>
-        <Title>I am a musician in Salt Lake City, UT. </Title>
-        <Title>I have multiple projects including </Title>
-        <Title>music for film and television.</Title>
-        <div>
-          <div style={{ width: '25px', height: '25px', background: '#E8EEF2' }}></div>
-          <div style={{ width: '25px', height: '25px', background: '#D6C9C9' }}></div>
-          <div style={{ width: '25px', height: '25px', background: '#C7D3DD' }}></div>
-          <div style={{ width: '25px', height: '25px', background: '#77B6EA' }}></div>
-          <div style={{ width: '25px', height: '25px', background: '#37393A' }}></div>
-        </div>
-        <Links>
-          <LinkBox>
-            <SubTitle>Taxi:</SubTitle>
-            <Link href="https://www.taxi.com/members/michael-sayer" target="_blank" rel="noopener noreferrer">
-              Taxi Member Profile
-            </Link>
-          </LinkBox>
+        <SubTitle>Composer based in Salt Lake City</SubTitle>
+        <SubTitle>I have multiple projects under way</SubTitle>
+        <SubTitle>including music for film and television.</SubTitle>
+        <ColorsVertical>
+          <div style={{ width: '25px', height: '25px', background: colors.white }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.lightGray }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.opal }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.green }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.darkGray }}></div>
+        </ColorsVertical>
+        <Projects>
+        <Project>
+            <SubTitle>Music for Film</SubTitle>
+            <Details>
+              <ProjectDetails>
+                <Text>
+                  A proud Taxi member for years. I love the process and the challenge
+                  of writing music for film. I have written music for a variety of
+                  projects including short films and documentaries.
+                  I'm always looking for new projects to work on.
+                  If you have a project you'd like to discuss, please contact me.
+                </Text>
+              </ProjectDetails>
+              <ProjectDetails>
+                <ColorsHorizontal>
+                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
+                </ColorsHorizontal>
+              </ProjectDetails>
+            </Details>
+            <Links>
+                <Link href="https://www.taxi.com/members/michael-sayer" target="_blank" rel="noopener noreferrer">
+                  Taxi Member Profile
+                </Link>
+              </Links>
+          </Project>
 
-          <LinkBox>
-            <SubTitle>Ghost of Young Michael:</SubTitle>
-            <Link href="https://youngmichael.bandcamp.com/" target="_blank" rel="noopener noreferrer">
-              bandcamp
-            </Link>
-            <Link href="youtube.com/user/michaeljsay" target="_blank" rel="noopener noreferrer">
-              youtube
-            </Link>
-          </LinkBox>
+          <Project>
+          <SubTitle>Ghost of Young Michael</SubTitle>
+            <Details>
+              <ProjectDetails>
+                <Text>
+                  Ghost of Young Michael is a solo ambient project. 
+                  Using acoustic instruments and electric processing,
+                  the project explores the relationship between the natural and
+                  the artificial.
+                </Text>
+              </ProjectDetails>
+              <ProjectDetails>
+                <ColorsHorizontal>
+                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
+                </ColorsHorizontal>
+              </ProjectDetails>
+            </Details>
+              <Links>
+                <Link href="https://youngmichael.bandcamp.com/" target="_blank" rel="noopener noreferrer">
+                  bandcamp
+                </Link>
+                <Link href="youtube.com/user/michaeljsay" target="_blank" rel="noopener noreferrer">
+                  youtube
+                </Link>
+              </Links>
+          </Project>
 
-          <LinkBox>
-            <SubTitle>The Great Turtle:</SubTitle>
-            <Link href="https://greatturtle.bandcamp.com/" target="_blank" rel="noopener noreferrer">
-              bandcamp
-            </Link>
-          </LinkBox>
-        </Links>
+          <Project>
+          <SubTitle>The Great Turtle</SubTitle>
+            <Details>
+
+                <ColorsDiagonal>
+                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
+                </ColorsDiagonal>
+
+              <ProjectDetails>
+                <Text>
+                  The Great Turtle is an electro-acoustic duo formed by Michael Sayer and Casey Dorcey.
+                  Sound exploration and organic development are at the heart of the music. 
+                  Blending native/folk like melodies with huge atmospheric world drones. 
+                  The Great Turtle seeks to take their listeners on the ecstatic journey.
+                </Text>
+              </ProjectDetails>
+            </Details>
+            <Links>
+                <Link href="https://greatturtle.bandcamp.com/" target="_blank" rel="noopener noreferrer">
+                  bandcamp
+                </Link>
+              </Links>
+          </Project>
+
+          <Project>
+          <SubTitle>Crime Tiger - coming soon</SubTitle>
+            <Details>
+              <ProjectDetails>
+                <ColorsVertical>
+                  <div style={{ width: '100%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.darkGrays }}></div>
+                </ColorsVertical>
+              </ProjectDetails>
+              <ProjectDetails>
+                <Text>
+                  Crime Tiger is a rock n roll band. We are currently recording our first album.
+                  We are looking forward to sharing it with you soon.
+                </Text>
+              </ProjectDetails>
+            </Details>
+              <Links>
+                <Link href="https://youngmichael.bandcamp.com/" target="_blank" rel="noopener noreferrer">
+                  bandcamp
+                </Link>
+                <Link href="youtube.com/user/michaeljsay" target="_blank" rel="noopener noreferrer">
+                  youtube
+                </Link>
+              </Links>
+          </Project>
+        </Projects>
       </Content>
     </Main>
   );
@@ -53,21 +146,17 @@ const Main = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  background: ${neveColors.darkBlue};
+  flex-direction: column;
+  background: ${colors.platinum};
 `;
 
 const Content = styled.div`
   width: 100%;
-  height: 72%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  background: ${neveColors.darkBlue};
-  padding: 20px;
-
-  @media (max-width: 768px) {
-    width: 90%;
-    height: 90%;
-  }
+  background: ${colors.platinum};
+  padding: 64px 44px;
 
   @media (max-width: 480px) {
     padding: 22px;
@@ -75,52 +164,124 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: calc(48px + (20 * (100vw - 1024px)) / 416);
-  margin: 0px;
-  color: ${neveColors.white};
+  font-size: 3em;
+  margin: 0px 0px 20px 0px;
+  color: ${colors.darkGray};
+
+  @media (max-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 const SubTitle = styled.h1`
   font-size: 2em;
+  font-weight: 300;
+  line-height: 1.5em;
   margin: 0px;
-  color: ${neveColors.white};
+  color: ${colors.darkGray};
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
 `;
 
-const Links = styled.div`
+const ColorsVertical = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 `;
 
-const LinkBox = styled.div`
+const ColorsHorizontal = styled.div`
   display: flex;
   flex-direction: row;
+  margin-top: 20px;
+`;
+
+const ColorsDiagonal = styled.div`
+  width: 265px;
+  display: flex;
+  flex-direction: row;
+  margin: 44px 20px 50px 100px;
+  transform: rotate(-45deg);
+
+  @media (max-width: 768px) {
+    display: none;
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+  }
+`;
+
+const Projects = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+`;
+
+const Project = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
+  padding-top: 44px;
+  border: 2px solid ${colors.opal};
+`;
+
+const Details = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const ProjectDetails = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 44px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 22px;
+  }
+`;
+
+const Text = styled.p`
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  margin: 0px;
+  line-height: 1.5;
+  color: ${colors.darkGray};
+`;
+
+const Links = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  padding-left: 44px;
+  border-top: 2px solid ${colors.opal};
 `;
 
 const Link = styled.a`
   width: fit-content;
-  box-shadow: -2px -2px 6px 0px #2f3a52, 2px 2px 2px 0px #00000017;
   margin: 10px 0px;
-  color: ${neveColors.lightBlue};
-  transition: all 0.2s ease;
-  transition-property: background, box-shadow;
+  color: ${colors.darkGray};
   padding: 13px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   text-decoration: none;
-  underline: none;
-  margin-left: 10px;
-  background: ${neveColors.darkBlue};
-  font-weight: 600;
-  font-size: 1.5em;
-  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
   &:hover {
-      text-shadow: 0px 0px 1px ${neveColors.lightBlue};
-      box-shadow: -6px -6px 10px 0px #2f3a52, 6px 6px 10px 0px #00000017;
+      color: ${colors.opal};
   }
 `;
 

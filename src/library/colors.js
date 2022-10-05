@@ -1,9 +1,10 @@
-const neveColors = {
-    white: '#F7F7F7',
-    darkGrey: '#39454E',
-    darkBlue: '#2A3948',
-    lightBlue: '#72A8E0',
-    red: '#9A424D',
-};
+const colors = {
+    white: '#F8F8F8',
+    platinum: '#E6E8E6',
+    lightGray: '#CED0CE',
+    opal: '#9FB8AD',
+    green: '#475841',
+    darkGray: '#3F403F'
+  };
 
-export { neveColors };
+export { colors };
