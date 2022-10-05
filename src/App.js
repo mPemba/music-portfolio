@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { neveColors } from './library/colors';
+import { colors } from './library/colors';
 
 const App = () => {
   return (
@@ -13,13 +13,42 @@ const App = () => {
         <SubTitle>I have multiple projects under way</SubTitle>
         <SubTitle>including music for film and television.</SubTitle>
         <ColorsVertical>
-          <div style={{ width: '25px', height: '25px', background: '#E8EEF2' }}></div>
-          <div style={{ width: '25px', height: '25px', background: '#D6C9C9' }}></div>
-          <div style={{ width: '25px', height: '25px', background: '#C7D3DD' }}></div>
-          <div style={{ width: '25px', height: '25px', background: '#77B6EA' }}></div>
-          <div style={{ width: '25px', height: '25px', background: '#37393A' }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.white }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.lightGray }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.opal }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.green }}></div>
+          <div style={{ width: '25px', height: '25px', background: colors.darkGray }}></div>
         </ColorsVertical>
         <Projects>
+        <Project>
+            <SubTitle>Music for Film</SubTitle>
+            <Details>
+              <ProjectDetails>
+                <Text>
+                  A proud Taxi member for years. I love the process and the challenge
+                  of writing music for film. I have written music for a variety of
+                  projects including short films and documentaries.
+                  I'm always looking for new projects to work on.
+                  If you have a project you'd like to discuss, please contact me.
+                </Text>
+              </ProjectDetails>
+              <ProjectDetails>
+                <ColorsHorizontal>
+                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
+                </ColorsHorizontal>
+              </ProjectDetails>
+            </Details>
+            <Links>
+                <Link href="https://www.taxi.com/members/michael-sayer" target="_blank" rel="noopener noreferrer">
+                  Taxi Member Profile
+                </Link>
+              </Links>
+          </Project>
+
           <Project>
           <SubTitle>Ghost of Young Michael</SubTitle>
             <Details>
@@ -33,11 +62,11 @@ const App = () => {
               </ProjectDetails>
               <ProjectDetails>
                 <ColorsHorizontal>
-                  <div style={{ width: '20%', height: '25px', background: '#E8EEF2' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#D6C9C9' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#C7D3DD' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#77B6EA' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#37393A' }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
                 </ColorsHorizontal>
               </ProjectDetails>
             </Details>
@@ -54,15 +83,15 @@ const App = () => {
           <Project>
           <SubTitle>The Great Turtle</SubTitle>
             <Details>
-              <ProjectDetails>
+
                 <ColorsDiagonal>
-                  <div style={{ width: '20%', height: '25px', background: '#E8EEF2' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#D6C9C9' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#C7D3DD' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#77B6EA' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#37393A' }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
                 </ColorsDiagonal>
-              </ProjectDetails>
+
               <ProjectDetails>
                 <Text>
                   The Great Turtle is an electro-acoustic duo formed by Michael Sayer and Casey Dorcey.
@@ -80,44 +109,15 @@ const App = () => {
           </Project>
 
           <Project>
-            <SubTitle>Music for Film</SubTitle>
-            <Details>
-              <ProjectDetails>
-                <Text>
-                  A proud Taxi member for years. I love the process and the challenge
-                  of writing music for film. I have written music for a variety of
-                  projects including short films and documentaries.
-                  I'm always looking for new projects to work on.
-                  If you have a project you'd like to discuss, please contact me.
-                </Text>
-              </ProjectDetails>
-              <ProjectDetails>
-                <ColorsHorizontal>
-                  <div style={{ width: '20%', height: '25px', background: '#E8EEF2' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#D6C9C9' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#C7D3DD' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#77B6EA' }}></div>
-                  <div style={{ width: '20%', height: '25px', background: '#37393A' }}></div>
-                </ColorsHorizontal>
-              </ProjectDetails>
-            </Details>
-            <Links>
-                <Link href="https://www.taxi.com/members/michael-sayer" target="_blank" rel="noopener noreferrer">
-                  Taxi Member Profile
-                </Link>
-              </Links>
-          </Project>
-
-          <Project>
           <SubTitle>Crime Tiger - coming soon</SubTitle>
             <Details>
               <ProjectDetails>
                 <ColorsVertical>
-                  <div style={{ width: '100%', height: '25px', background: '#E8EEF2' }}></div>
-                  <div style={{ width: '100%', height: '25px', background: '#D6C9C9' }}></div>
-                  <div style={{ width: '100%', height: '25px', background: '#C7D3DD' }}></div>
-                  <div style={{ width: '100%', height: '25px', background: '#77B6EA' }}></div>
-                  <div style={{ width: '100%', height: '25px', background: '#37393A' }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.darkGrays }}></div>
                 </ColorsVertical>
               </ProjectDetails>
               <ProjectDetails>
@@ -147,7 +147,7 @@ const Main = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: ${neveColors.darkBlue};
+  background: ${colors.platinum};
 `;
 
 const Content = styled.div`
@@ -155,13 +155,8 @@ const Content = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: ${neveColors.darkBlue};
+  background: ${colors.platinum};
   padding: 64px 44px;
-
-  @media (max-width: 768px) {
-    width: 90%;
-    height: 90%;
-  }
 
   @media (max-width: 480px) {
     padding: 22px;
@@ -171,7 +166,7 @@ const Content = styled.div`
 const Title = styled.h1`
   font-size: 3em;
   margin: 0px 0px 20px 0px;
-  color: ${neveColors.white};
+  color: ${colors.darkGray};
 
   @media (max-width: 768px) {
     font-size: 2em;
@@ -183,7 +178,11 @@ const SubTitle = styled.h1`
   font-weight: 300;
   line-height: 1.5em;
   margin: 0px;
-  color: ${neveColors.white};
+  color: ${colors.darkGray};
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
 `;
 
 const ColorsVertical = styled.div`
@@ -202,12 +201,14 @@ const ColorsDiagonal = styled.div`
   width: 265px;
   display: flex;
   flex-direction: row;
-  margin-top: 65px;
+  margin: 44px 20px 50px 100px;
   transform: rotate(-45deg);
 
   @media (max-width: 768px) {
-    width: 80px;
-    margin-top: 0px;
+    display: none;
+    height: 0px;
+    width: 0px;
+    padding: 0px;
   }
 `;
 
@@ -225,7 +226,7 @@ const Project = styled.div`
   align-items: center;
   margin-bottom: 80px;
   padding-top: 44px;
-  border: 2px solid ${neveColors.white};
+  border: 2px solid ${colors.opal};
 `;
 
 const Details = styled.div`
@@ -257,7 +258,7 @@ const Text = styled.p`
   font-size: 1em;
   margin: 0px;
   line-height: 1.5;
-  color: ${neveColors.white};
+  color: ${colors.darkGray};
 `;
 
 const Links = styled.div`
@@ -268,19 +269,19 @@ const Links = styled.div`
   align-items: center;
   margin-top: 10px;
   padding-left: 44px;
-  border-top: 2px solid ${neveColors.white};
+  border-top: 2px solid ${colors.opal};
 `;
 
 const Link = styled.a`
   width: fit-content;
   margin: 10px 0px;
-  color: ${neveColors.white};
+  color: ${colors.darkGray};
   padding: 13px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1em;
   &:hover {
-      color: ${neveColors.lightBlue};
+      color: ${colors.opal};
   }
 `;
 
