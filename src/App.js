@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { colors } from './library/colors';
 
 const App = () => {
-  const test = 1;
   return (
     <Main>
       <Content>
@@ -27,8 +26,8 @@ const App = () => {
               <ProjectDetails>
                 <Text>
                   A proud Taxi member for years. I love the process and the challenge of writing music for film. 
-                  My music has been featured in indie films and podcasts and I'm always looking for new projects.
-                  If you have a project you'd like to discuss, please contact me at michael.j.say@gmail.com.
+                  My music has been featured in indie films and podcasts and I&apos;m always looking for new projects.
+                  If you have a project you&apos;d like to discuss, please contact me at michael.j.say@gmail.com.
                 </Text>
               </ProjectDetails>
               <ProjectDetails>
@@ -132,8 +131,8 @@ const App = () => {
             <Notes>
               <SubTitle>Notes</SubTitle>
               <Text>
-                I'm pretty sure social media is causing the downfall of democracy, so I stay off most of it.
-                Here's my LinkedIn and Twitter just in case:
+                I&apos;m pretty sure social media is causing the downfall of democracy, so I stay off most of it.
+                Here&apos;s my LinkedIn and Twitter just in case:
               </Text>
               <LogoContainer>
                 <LogoLink href="https://www.linkedin.com/in/mikesayer/" target="_blank" rel="noopener noreferrer">
@@ -153,7 +152,7 @@ const App = () => {
       </Content>
     </Main>
   );
-}
+};
 
 const Main = styled.div`
   width: 100%;
