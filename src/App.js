@@ -52,9 +52,9 @@ const App = () => {
             <Details>
               <ProjectDetails>
                 <Text>
-                  Ghost of Young Michael is a solo ambient project. 
+                  Ghost of Young Michael is a solo project. 
                   Using acoustic instruments and electric processing,
-                  the project explores the relationship between the natural and
+                  I&apos;m exploring the relationship between the natural and
                   the artificial.
                 </Text>
               </ProjectDetails>
@@ -81,7 +81,7 @@ const App = () => {
           <Project>
           <SubTitle>The Great Turtle</SubTitle>
             <Details>
-
+              <ProjectDetails>
                 <ColorsDiagonal>
                   <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
                   <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
@@ -89,7 +89,7 @@ const App = () => {
                   <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
                   <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
                 </ColorsDiagonal>
-
+              </ProjectDetails>
               <ProjectDetails>
                 <Text>
                   The Great Turtle is an electro-acoustic duo formed by Michael Sayer and Casey Dorcey.
@@ -111,7 +111,7 @@ const App = () => {
             <Details>
               <ProjectDetails>
                 <Text>
-                  Crime Tiger is an folk rock band. We are currently recording our first album.
+                  Crime Tiger is a folk rock band. We are currently recording our first album.
                   We are looking forward to sharing it with you soon.
                 </Text>
               </ProjectDetails>
@@ -143,7 +143,7 @@ const App = () => {
                 </LogoLink> 
               </LogoContainer>
               <Text>
-                If you are looking for my software engineering portfolio, you can find it 
+                If you are looking for my software engineering CV, you can find it 
                 <LogoLink style={{ color: colors.green }} href="https://www.michaelsayer.com/" target="_blank" rel="noopener noreferrer"> here</LogoLink>
               </Text>
             </Notes>
