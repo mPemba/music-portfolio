@@ -36,7 +36,7 @@ const App = () => {
                   <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
                   <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
                   <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGray }}></div>
                 </ColorsHorizontal>
               </ProjectDetails>
             </Details>
@@ -51,21 +51,21 @@ const App = () => {
           <SubTitle>Ghost of Young Michael</SubTitle>
             <Details>
               <ProjectDetails>
+                <ColorsHorizontal>
+                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGray }}></div>
+                </ColorsHorizontal>
+              </ProjectDetails>
+              <ProjectDetails>
                 <Text>
                   Ghost of Young Michael is a solo project. 
                   Using acoustic instruments and electric processing,
                   I&apos;m exploring the relationship between the natural and
                   the artificial.
                 </Text>
-              </ProjectDetails>
-              <ProjectDetails>
-                <ColorsHorizontal>
-                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
-                </ColorsHorizontal>
               </ProjectDetails>
             </Details>
               <Links>
@@ -82,21 +82,21 @@ const App = () => {
           <SubTitle>The Great Turtle</SubTitle>
             <Details>
               <ProjectDetails>
-                <ColorsDiagonal>
-                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
-                  <div style={{ width: '20%', height: '25px', background: colors.darkGrays }}></div>
-                </ColorsDiagonal>
-              </ProjectDetails>
-              <ProjectDetails>
                 <Text>
                   The Great Turtle is an electro-acoustic duo formed by Michael Sayer and Casey Dorcey.
                   Sound exploration and organic development are at the heart of the music. 
                   Blending native/folk like melodies with huge atmospheric world drones. 
                   The Great Turtle seeks to take their listeners on the ecstatic journey.
                 </Text>
+              </ProjectDetails>
+              <ProjectDetails>
+                <ColorsHorizontal>
+                  <div style={{ width: '20%', height: '25px', background: colors.white }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.lightGray }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.opal }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.green }}></div>
+                  <div style={{ width: '20%', height: '25px', background: colors.darkGray }}></div>
+                </ColorsHorizontal>
               </ProjectDetails>
             </Details>
             <Links>
@@ -121,7 +121,7 @@ const App = () => {
                   <div style={{ width: '100%', height: '25px', background: colors.lightGray }}></div>
                   <div style={{ width: '100%', height: '25px', background: colors.opal }}></div>
                   <div style={{ width: '100%', height: '25px', background: colors.green }}></div>
-                  <div style={{ width: '100%', height: '25px', background: colors.darkGrays }}></div>
+                  <div style={{ width: '100%', height: '25px', background: colors.darkGray }}></div>
                 </ColorsVertical>
               </ProjectDetails>
             </Details>
@@ -207,21 +207,6 @@ const ColorsHorizontal = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-`;
-
-const ColorsDiagonal = styled.div`
-  width: 265px;
-  display: flex;
-  flex-direction: row;
-  margin: 44px 20px 50px 100px;
-  transform: rotate(-45deg);
-
-  @media (max-width: 768px) {
-    display: none;
-    height: 0px;
-    width: 0px;
-    padding: 0px;
-  }
 `;
 
 const Projects = styled.div`
