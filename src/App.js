@@ -224,6 +224,11 @@ const Project = styled.div`
   margin-bottom: 80px;
   padding-top: 44px;
   border: 2px solid ${colors.opal};
+
+  @media (max-width: 768px) {
+    padding-top: 22px;
+    margin-bottom: 40px;
+  }
 `;
 
 const Details = styled.div`
@@ -295,7 +300,7 @@ const Notes = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 22px;
+    padding: 0px 22px 22px 22px;
   }
 `;
 
