@@ -291,7 +291,7 @@ const Notes = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 44px;
+  padding: 0px 44px 44px 44px;
 
   @media (max-width: 768px) {
     width: 100%;
