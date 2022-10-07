@@ -150,21 +150,27 @@ const App = () => {
           </Project>
         </Projects>
       </Content>
+      <SideBarColors>
+        <SideBarColor style={{ background: colors.white }}></SideBarColor>
+        <SideBarColor style={{ background: colors.lightGray }}></SideBarColor>
+        <SideBarColor style={{ background: colors.opal }}></SideBarColor>
+        <SideBarColor style={{ background: colors.green }}></SideBarColor>
+        <SideBarColor style={{ background: colors.darkGray }}></SideBarColor>
+      </SideBarColors>
     </Main>
   );
 };
 
 const Main = styled.div`
   width: 100%;
-  height: 100%;
+  height: fit-content;
   display: flex;
-  flex-direction: column;
   background: ${colors.platinum};
 `;
 
 const Content = styled.div`
   width: 100%;
-  height: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   background: ${colors.platinum};
@@ -172,6 +178,41 @@ const Content = styled.div`
 
   @media (max-width: 480px) {
     padding: 22px;
+  }
+`;
+
+const SideBarColors = styled.div`
+  width: 2%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: width 0.5s ease;
+
+  @media (min-width: 1078px) {
+    width: 5%;
+  }
+
+  @media (min-width: 1290px) {
+    width: 15%;
+  }
+
+  @media (min-width: 1550px) {
+    width: 25%;
+  }
+
+  @media (min-width: 1800px) {
+    width: 45%;
+  }
+`;
+
+const SideBarColor = styled.div`
+  width: 100%;
+  height: 20%;
+  min-height: 560px;
+
+  @media (max-width: 768px) {
+    min-height: 480px;
   }
 `;
 
@@ -194,6 +235,7 @@ const SubTitle = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 1em;
+    font-weight: 600;
   }
 `;
 
@@ -217,6 +259,7 @@ const Projects = styled.div`
 
 const Project = styled.div`
   width: 100%;
+  max-width: 1078px;
   display: flex;
   flex-direction: column;
   justify-content: center;
