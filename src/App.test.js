@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders sub text', () => {
+test('renders headline', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Composer based in Salt Lake City./i);
-  expect(linkElement).toBeInTheDocument();
+  const headline = screen.getByText(/Michael Sayer/i);
+  expect(headline).toBeInTheDocument();
 });
