@@ -131,24 +131,24 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 48px;
+  font-size: clamp(3rem, 5vw, 4rem);
   margin: 10px 0px 10px 0px;
   color: ${colors.textWhite};
 `;
 
 const SubTitle = styled.h3`
-  font-size: 36px;
-  line-height: 40px;
+  font-size: clamp(1rem, 5vw, 3rem);
+  line-height: 44px;
   margin: 0px;
   color: ${colors.textBlack};
 
   @media (max-width: 768px) {
-    font-size: 2em;
+    line-height: 20px;
   }
 `;
 
 const Accent = styled.span`
-  font-size: 44px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 40px;
   color: ${colors.textWhite};
 `;
@@ -237,6 +237,7 @@ const ProjectTitle = styled.a`
 `;
 
 const Text = styled.p`
+  max-width: 420px;
   font-size: 16px;
   font-family: 'Hanken Grotesk';
   margin: 0px 0px 19px 0px;
