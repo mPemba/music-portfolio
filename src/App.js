@@ -6,9 +6,53 @@ import WoodMachine1 from './library/images/WoodMachine1.jpg';
 import linkedin from './library/images/linkedin.svg';
 import twitter from './library/images/twitter.svg';
 import code from './library/images/code-solid.svg';
-import darkOceanWaves from './library/images/darkOceanWaves.jpg';
 import './library/fonts/Bogart-Light.ttf';
 import './library/fonts/Bogart-Regular.ttf';
+
+const info = [
+  {
+    title: 'Music for Film',
+    link: 'https://www.taxi.com/members/michael-sayer',
+    text1: 'A proud Taxi member for years. I love the process and the challenge of writing music for film.',
+    text2: 'My music has been featured in indie films and podcasts and I\'m always looking for new projects.'
+  },
+  {
+    title: 'Ghost of Young Michael',
+    link: 'https://youngmichael.bandcamp.com',
+    text1: 'Ghost of Young Michael is an ambient solo project. Using acoustic instruments and electric processing.',
+    text2: 'I\'m exploring the relationship between the natural and the artificial.'
+  },
+  {
+    title: 'Great Turtle',
+    link: 'https://greatturtle.bandcamp.com',
+    text1: 'The Great Turtle is an electro-acoustic duo formed with Casey Dorcey. Sound exploration and organic development are at the heart of the music.',
+    text2: 'Blending native/folk like melodies with huge atmospheric world drones, The Great Turtle seeks to take their listeners on the ecstatic journey.',
+  },
+  {
+    title: 'Crime Tiger',
+    link: 'https://crimetiger.bandcamp.com',
+    text1: 'Crime Tiger is a rock \'n roll band. We are currently recording our first album. We are looking forward to sharing it with you soon.',
+    text2: '',
+  }
+];
+
+const links = [
+  {
+    link: 'https://www.linkedin.com/in/mikesayer/',
+    logo: linkedin,
+    alt: 'linkedin',
+  },
+  {
+    link: 'https://www.twitter.com/michaeljsayer/',
+    logo: twitter,
+    alt: 'twitter',
+  },
+  {
+    link: 'https://www.michaelsayer.com/',
+    logo: code,
+    alt: 'software engineering cv',
+  },
+];
 
 const App = () => {
   return (
@@ -22,86 +66,45 @@ const App = () => {
         <HeadingImageContainer>
           <HeadingImage src={desk}></HeadingImage>
         </HeadingImageContainer>
-        
         <SubTitle>Projects</SubTitle>
         <Projects>
-          <Project>
-            <Details>
-              <ProjectTitle href="https://www.taxi.com/members/michael-sayer" target="_blank" rel="noopener noreferrer">Music for Film</ProjectTitle>
-              <Text>
-                A proud Taxi member for years. I love the process and the challenge of writing music for film. 
-              </Text>
-              <Text>
-                My music has been featured in indie films and podcasts and I&apos;m always looking for new projects.
-              </Text>
-            </Details>
-          </Project>
-
-          <Project>
-            <Details>
-              <ProjectTitle href="https://youngmichael.bandcamp.com/" target="_blank" rel="noopener noreferrer">Ghost of Young Michael</ProjectTitle>
+          {info.map((item, index) => (
+            <Project key={index}>
+              <Details>
+                <ProjectTitle href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</ProjectTitle>
                 <Text>
-                  Ghost of Young Michael is an ambient solo project. 
-                  Using acoustic instruments and electric processing.
-                  I&apos;m exploring the relationship between the natural and
-                  the artificial.
+                  {item.text1}
                 </Text>
-            </Details>
-          </Project>
-
-          <Project>
-            <Details>
-              <ProjectTitle href="https://greatturtle.bandcamp.com/" target="_blank" rel="noopener noreferrer">The Great Turtle</ProjectTitle>
-              <Text>
-                  The Great Turtle is an electro-acoustic duo formed with Casey Dorcey.
-                  Sound exploration and organic development are at the heart of the music. 
-                </Text>
-                <Text>
-                  Blending native/folk like melodies with huge atmospheric world drones. 
-                  The Great Turtle seeks to take their listeners on the ecstatic journey.
-              </Text>
-            </Details>
-          </Project>
-
-          <Project>
-            <Details>
-              <CrimeTitle>Crime Tiger</CrimeTitle>
-                <Text>
-                  Crime Tiger is a rock &apos;n roll band. We are currently recording our first album.
-                  We are looking forward to sharing it with you soon.
-                </Text>
-            </Details>
-          </Project>
+                {item.text2 && (
+                  <Text>
+                    {item.text2}
+                  </Text>
+                )}
+              </Details>
+            </Project>
+          ))}
         </Projects>
-
         <SubTitle>Work with me</SubTitle>
         <WorkImageContainer>
           <WorkImage src={WoodMachine1}></WorkImage>
         </WorkImageContainer>
-
         <Links>
           <LinkContainer>
             <LinkTitle>LINKS</LinkTitle>
             <LogoContainer>
-              <LogoLink href="https://www.linkedin.com/in/mikesayer/" target="_blank" rel="noopener noreferrer">
-                <Logo src={linkedin} alt='linkedin' />
-              </LogoLink>
-              <LogoLink href="https://www.twitter.com/michaeljsayer/" target="_blank" rel="noopener noreferrer">
-                <Logo src={twitter} alt='twitter' />
-              </LogoLink>
-              <LogoLink href="https://www.michaelsayer.com/" target="_blank" rel="noopener noreferrer">
-                <Logo src={code} alt='software engineering cv' />
-              </LogoLink>
+              {links.map((item, index) => (
+                <LogoLink key={index} href={item.link}  target="_blank" rel="noopener noreferrer">
+                  <Logo src={item.logo} alt={item.alt} />
+                </LogoLink>
+              ))}
             </LogoContainer>
           </LinkContainer>
-
           <LinkContainer>
             <LinkTitle>EMAIL</LinkTitle>
             <LinkDetail>michael.j.say@gmail.com</LinkDetail>
           </LinkContainer>
         </Links>
       </Content>
-      <Ocean src={darkOceanWaves}></Ocean>
     </Main>
   );
 };
@@ -123,7 +126,7 @@ const Content = styled.div`
   padding: 100px;
 
   @media (max-width: 768px) {
-    padding: 22px;
+    padding: 100px 22px;
   }
 `;
 
@@ -155,16 +158,16 @@ const HeadingImageContainer = styled.div`
   height: 455px;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 100px;
+  margin: 30px 0px 100px 0px;
   
   @media (max-width: 768px) {
-    margin-bottom: 50px;
-    margin-top: 30px;
+    margin: 30px 0px 50px 0px;
   }
 `;
 
 const HeadingImage = styled.img`
-  width: 646px;
+  width: 80%;
+  max-width: 1060px;
   height: 455px;
   border: 2px solid ${colors.textBlack};
   object-fit: cover;
@@ -179,7 +182,7 @@ const WorkImageContainer = styled.div`
   height: 388px;
   display: flex;
   justify-content: flex-end;
-  margin-top: 50px;
+  margin: 50px 0px;
 
   @media (max-width: 768px) {
     display: none;
@@ -197,10 +200,7 @@ const Projects = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 768px) {
-    margin-top: 30px;
-  }
+  margin-top: 30px;
 `;
 
 const Project = styled.div`
@@ -236,13 +236,6 @@ const ProjectTitle = styled.a`
   }
 `;
 
-const CrimeTitle = styled.div`
-  width: fit-content;
-  font-size: 22px;
-  color: ${colors.textBlack};
-  margin: 0px 0px 19px 0px;
-`;
-
 const Text = styled.p`
   font-size: 16px;
   font-family: 'Hanken Grotesk';
@@ -257,7 +250,7 @@ const Links = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px 0px 150px 0px;
 `;
 
 const LinkTitle = styled.span`
@@ -304,11 +297,6 @@ const LogoLink = styled.a`
   height: 25px;
   padding: 0px;
   margin: 0px;
-`;
-
-const Ocean = styled.img`
-  width: 100%;
-  object-fit: cover;
 `;
 
 export default App;
