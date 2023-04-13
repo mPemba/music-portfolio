@@ -158,11 +158,7 @@ const HeadingImageContainer = styled.div`
   height: 455px;
   display: flex;
   justify-content: flex-end;
-  margin: 30px 0px 100px 0px;
-  
-  @media (max-width: 768px) {
-    margin: 30px 0px 50px 0px;
-  }
+  margin: 30px 0px 200px 0px;
 `;
 
 const HeadingImage = styled.img`
@@ -171,6 +167,10 @@ const HeadingImage = styled.img`
   height: 455px;
   border: 2px solid ${colors.textBlack};
   object-fit: cover;
+
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
