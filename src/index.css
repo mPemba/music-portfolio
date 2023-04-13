@@ -2,18 +2,21 @@
   font-family: "BogartLight";
   src: local("Bogart-Light"),
     url("./library/fonts/Bogart-Light.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Bogart";
   src: local("Bogart-Regular"),
     url("./library/fonts/Bogart-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "BogartMedium";
   src: local("Bogart-Medium"),
     url("./library/fonts/Bogart-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 
 h1, h2, h3, img {

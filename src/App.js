@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from './library/colors';
-import desk from './library/images/desk.jpg';
-import WoodMachine1 from './library/images/WoodMachine1.jpg';
-import linkedin from './library/images/linkedin.svg';
-import twitter from './library/images/twitter.svg';
-import code from './library/images/code-solid.svg';
 import './library/fonts/Bogart-Light.ttf';
 import './library/fonts/Bogart-Regular.ttf';
 
@@ -39,17 +34,17 @@ const info = [
 const links = [
   {
     link: 'https://www.linkedin.com/in/mikesayer/',
-    logo: linkedin,
+    logo: '/linkedin.svg',
     alt: 'linkedin',
   },
   {
     link: 'https://www.twitter.com/michaeljsayer/',
-    logo: twitter,
+    logo: '/twitter.svg',
     alt: 'twitter',
   },
   {
     link: 'https://www.michaelsayer.com/',
-    logo: code,
+    logo: '/code-solid.svg',
     alt: 'software engineering cv',
   },
 ];
@@ -64,7 +59,7 @@ const App = () => {
         <SubTitle>Engineer <Accent>&</Accent></SubTitle>
         <SubTitle>Composer</SubTitle>
         <HeadingImageContainer>
-          <HeadingImage src={desk}></HeadingImage>
+          <HeadingImage src='deskSmall.webp' alt='me'></HeadingImage>
         </HeadingImageContainer>
         <SubTitle>Projects</SubTitle>
         <Projects>
@@ -86,7 +81,7 @@ const App = () => {
         </Projects>
         <SubTitle>Work with me</SubTitle>
         <WorkImageContainer>
-          <WorkImage src={WoodMachine1}></WorkImage>
+          <WorkImage src='WoodMachine1.webp' alt="new machines"></WorkImage>
         </WorkImageContainer>
         <Links>
           <LinkContainer>
@@ -136,7 +131,7 @@ const Title = styled.h1`
   color: ${colors.textWhite};
 `;
 
-const SubTitle = styled.h3`
+const SubTitle = styled.h2`
   font-size: clamp(1rem, 5vw, 3rem);
   line-height: 44px;
   margin: 0px;
