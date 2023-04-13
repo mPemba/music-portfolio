@@ -59,7 +59,7 @@ const App = () => {
         <SubTitle>Engineer <Accent>&</Accent></SubTitle>
         <SubTitle>Composer</SubTitle>
         <HeadingImageContainer>
-          <HeadingImage src='deskSmall.webp' alt='me'></HeadingImage>
+          <HeadingImage src='deskSmall.jpeg' alt='me'></HeadingImage>
         </HeadingImageContainer>
         <SubTitle>Projects</SubTitle>
         <Projects>
@@ -81,7 +81,7 @@ const App = () => {
         </Projects>
         <SubTitle>Work with me</SubTitle>
         <WorkImageContainer>
-          <WorkImage src='WoodMachine1.webp' alt="new machines"></WorkImage>
+          <WorkImage src='WoodMachine1.jpg' alt="new machines"></WorkImage>
         </WorkImageContainer>
         <Links>
           <LinkContainer>
