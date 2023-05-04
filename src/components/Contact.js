@@ -15,7 +15,7 @@ const Contact = () => {
           <LinkTitle>LINKS</LinkTitle>
           <LogoContainer>
             {links.map((item, index) => (
-              <LogoLink key={index} href={item.link}  target="_blank" rel="noopener noreferrer">
+              <LogoLink key={index} href={item.link} target="_blank" rel="noopener noreferrer">
                 <Logo src={item.logo} alt={item.alt} />
               </LogoLink>
             ))}
