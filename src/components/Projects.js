@@ -7,22 +7,22 @@ const Projects = () => {
   return (
     <>
       <SubTitle>Projects</SubTitle>
-        <ProjectBox>
-          {info.map((item, index) => (
-            <Project key={index}>
-              <Details>
-                <ProjectTitle href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</ProjectTitle>
+      <ProjectBox>
+        {info.map((item, index) => (
+          <Project key={index}>
+            <Details>
+              <ProjectTitle href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</ProjectTitle>
+              <Text>
+                {item.text1}
+              </Text>
+              {item.text2 && (
                 <Text>
-                  {item.text1}
+                  {item.text2}
                 </Text>
-                {item.text2 && (
-                  <Text>
-                    {item.text2}
-                  </Text>
-                )}
-              </Details>
-            </Project>
-          ))}
+              )}
+            </Details>
+          </Project>
+        ))}
       </ProjectBox>
     </>
   );
