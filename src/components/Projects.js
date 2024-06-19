@@ -31,7 +31,7 @@ const ProjectBox = styled.div`
   width: 90%;
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 50px;
 `;
 
 const Project = styled.div`

@@ -94,6 +94,8 @@ const DelayCalculator = () => {
     setBPM(e.target.value);
   };
 
+  if (!results) return null;
+
   return (
     <Calculator>
       <Title>Delay Calculator</Title>
@@ -111,113 +113,70 @@ const DelayCalculator = () => {
         <>
           <Display>
             <DelayValuesContainer>
-              <h2>Regular</h2>
+              <Subtitle>Regular</Subtitle>
               <DelayValues results={results.regular} />
             </DelayValuesContainer>
-
-            <Circles>
-              {Object.entries(results).length > 0 &&
-                Object.entries(results.regular)
-                  .sort((a, b) => a[1].delay - b[1].delay)
-                  .map(([noteType, value], index) => {
-                    return (
-                      <div
-                        key={value.delay}
-                        style={{
-                          position: "absolute",
-                          top: "50%",
-                          left: `${20 + index * 10}%`,
-                          transform: "translate(-50%, -50%)",
-                          width: `${results.dotted[noteType].delay / 20}px`,
-                          height: `${results.dotted[noteType].delay / 20}px`,
-                          borderRadius: "50%",
-                          backgroundColor: colors.blue,
-                          opacity: `${1 - index * 0.2}`,
-                          border: `1px solid ${colors.textBlack}`,
-                          animation: `echo 2s ${value.delay / 1000}s infinite`,
-                        }}
-                      ></div>
-                    );
-                  })}
-            </Circles>
           </Display>
           <Display>
             <DelayValuesContainer>
-              <h2>Triplet</h2>
+              <Subtitle>Triplet</Subtitle>
               <DelayValues results={results.triplet} />
             </DelayValuesContainer>
-
-            <Circles>
-              {Object.entries(results).length > 0 &&
-                Object.entries(results.triplet)
-                  .sort((a, b) => a[1].delay - b[1].delay)
-                  .map(([noteType, value], index) => {
-                    const circles = [];
-                    for (let i = 0; i < 3; i++) {
-                      circles.push(
-                        <div
-                          key={`${value.delay}-${i}`}
-                          style={{
-                            position: "absolute",
-                            top: "50%",
-                            left: `${20 + index * 10 + i * 2}%`,
-                            transform: "translate(-50%, -50%)",
-                            width: `${results.dotted[noteType].delay / 20}px`,
-                            height: `${results.dotted[noteType].delay / 20}px`,
-                            borderRadius: "50%",
-                            backgroundColor: colors.dimGrey,
-                            opacity: `${1 - index * 0.2}`,
-                            border: `1px solid ${colors.textBlack}`,
-                            animation: `echo 2s ${
-                              value.delay / 1000 + i * 0.2
-                            }s infinite`,
-                          }}
-                        ></div>
-                      );
-                    }
-                    return circles;
-                  })}
-            </Circles>
           </Display>
           <Display>
             <DelayValuesContainer>
-              <h2>Dotted</h2>
+              <Subtitle>Dotted</Subtitle>
               <DelayValues results={results.dotted} />
             </DelayValuesContainer>
-
-            <Circles>
-              {Object.entries(results).length > 0 &&
-                Object.entries(results.dotted)
-                  .sort((a, b) => a[1].delay - b[1].delay)
-                  .map(([noteType, value], index) => {
-                    const circles = [];
-                    for (let i = 0; i < 4; i++) {
-                      // change this to 4
-                      circles.push(
-                        <div
-                          key={`${value.delay}-${i}`}
-                          style={{
-                            position: "absolute",
-                            top: "50%",
-                            left: `${20 + index * 10 + i * 2}%`,
-                            transform: "translate(-50%, -50%)",
-                            width: `${results.dotted[noteType].delay / 20}px`,
-                            height: `${results.dotted[noteType].delay / 20}px`,
-                            borderRadius: "50%",
-                            backgroundColor: colors.dimGrey,
-                            opacity: `${1 - index * 0.2}`,
-                            border: `1px solid ${colors.textBlack}`,
-                            animation: `echo 2s ${
-                              value.delay / 1000 + i * 0.2
-                            }s infinite`,
-                          }}
-                        ></div>
-                      );
-                    }
-                    return circles;
-                  })}
-            </Circles>
           </Display>
+
+          <Subtitle>Reverb Times</Subtitle>
+          <div>
+            {Object.entries(results.reverbTimes).map(([key, value]) => (
+              <Reverb key={key}>
+                <Item>
+                  <Key>Pre-Delay:</Key>
+                  <Value>{value.preDelay}ms</Value>
+                </Item>
+
+                <Item>
+                  <Key>Decay Time:</Key>
+                  <Value>{value.decayTime}ms</Value>
+                </Item>
+
+                <Item>
+                  <Key>Total Reverb Time:</Key>
+                  <Value>{value.totalReverbTime}ms</Value>
+                </Item>
+              </Reverb>
+            ))}
+          </div>
+
+          <Circles>
+            {Object.entries(results).length > 0 &&
+              Object.entries(results.regular)
+                .sort((a, b) => a[1].delay - b[1].delay)
+                .map(([noteType, value], index) => {
+                  return (
+                    <div
+                      key={value.delay}
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: `${20 + index * 10}%`,
+                        transform: "translate(-50%, -50%)",
+                        width: `${results.dotted[noteType].delay / 20}px`,
+                        height: `${results.dotted[noteType].delay / 20}px`,
+                        borderRadius: "50%",
+                        backgroundColor: colors.blue,
+                        opacity: `${1 - index * 0.2}`,
+                        border: `1px solid ${colors.textBlack}`,
+                        animation: `echo 2s ${value.delay / 1000}s infinite`,
+                      }}
+                    ></div>
+                  );
+                })}
+          </Circles>
         </>
       )}
     </Calculator>
@@ -228,6 +187,12 @@ const Title = styled.h1`
   font-size: clamp(3rem, 5vw, 4rem);
   margin: 10px 0px 10px 0px;
   color: ${colors.textWhite};
+`;
+
+const Subtitle = styled.h2`
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 10px 0px 10px 0px;
+  color: ${colors.textBlack};
 `;
 
 const Calculator = styled.div`
@@ -242,6 +207,10 @@ const Calculator = styled.div`
 const Controls = styled.div`
   width: 50%;
   display: flex;
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
 `;
 
 const BpmInput = styled.input`
@@ -264,17 +233,39 @@ const Display = styled.div`
 `;
 
 const DelayValuesContainer = styled.div`
-  width: 20%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
 `;
 
 const Circles = styled.div`
-  width: 80%;
+  width: 100%;
   height: 290px;
   position: relative;
   display: flex;
+`;
+
+const Reverb = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-bottom: 1px solid ${colors.textBlack};
+`;
+
+const Item = styled.li`
+  display: flex;
+  gap: 10px;
+`;
+
+const Key = styled.div`
+  font-weight: 600;
+`;
+
+const Value = styled.div`
+  font-weight: 300;
 `;
 
 export default DelayCalculator;

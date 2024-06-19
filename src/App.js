@@ -9,7 +9,7 @@ import DelayCalculator from "./components/DelayCalc";
 
 const App = () => {
   const [showDelayReverbCalculator, setShowDelayReverbCalculator] =
-    useState(true);
+    useState(false);
 
   return (
     <Main>
@@ -21,15 +21,15 @@ const App = () => {
         <SubTitle>Composer</SubTitle>
         <Projects />
         <Contact />
-        <div>
-          <button
+        <HiddenContainer>
+          <DelayReverbButton
             onClick={() =>
               setShowDelayReverbCalculator(!showDelayReverbCalculator)
             }
           >
             D&R
-          </button>
-        </div>
+          </DelayReverbButton>
+        </HiddenContainer>
       </Content>
 
       {showDelayReverbCalculator && <DelayCalculator />}
@@ -79,6 +79,26 @@ const Accent = styled.span`
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 40px;
   color: ${colors.textWhite};
+`;
+
+const HiddenContainer = styled.div`
+  opacity: 0.2;
+  margin-top: 100px;
+`;
+
+const DelayReverbButton = styled.button`
+  width: fit-content;
+  font-size: 14px;
+  color: ${colors.dimGrey};
+  margin: 0px;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  :hover {
+    color: ${colors.textBlack};
+  }
 `;
 
 export default App;
